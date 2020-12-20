@@ -10,12 +10,15 @@ root.configure(background = "#546E7A" , bd = 5+2+2+1)
 
 def calculate(resolver):
     if resolver == "second_degree_calculator":
-        a = int(sv_a.get())
-        b = int(sv_b.get())
-        c = int(sv_c.get())
-        x = int(sv_x.get())
-        result = a * (x**2) + b * x + c
-        en_result.set(f"{result}")
+        try:
+            a = int(sv_a.get())
+            b = int(sv_b.get())
+            c = int(sv_c.get())
+            x = int(sv_x.get())
+            result = a * (x**2) + b * x + c
+            en_result.set(f"{result}")
+        except:
+            pass
 
 
 Label(root , text = "Enter a :" , font = ("SimHei" , 15 , "bold") , bg = "#FFEB3B" , fg = "#000" , relief = RIDGE , bd = 5 ).place(x = 0 , y = 20)
